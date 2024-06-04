@@ -1,16 +1,8 @@
-/**
-* Template Name: Moderna
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
-  /**
-   * Easy selector helper function
-   */
+ 
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -20,9 +12,7 @@
     }
   }
 
-  /**
-   * Easy event listener function
-   */
+ 
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
     if (selectEl) {
