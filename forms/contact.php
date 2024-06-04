@@ -12,15 +12,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
    
     $to = "soberclubrw@gmail.com";
-   
     $subject = "Contact Form Submission";
     
-    
+
     $email_message = "Name: $name\n";
     $email_message .= "Email: $email\n";
     $email_message .= "Message: $message\n";
-    
-    
+
     $headers = "From: $name <$email>\r\n";
     $headers .= "Reply-To: $email\r\n";
     
