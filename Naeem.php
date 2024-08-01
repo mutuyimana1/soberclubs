@@ -9,16 +9,13 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
     rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +24,6 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
   
@@ -35,14 +31,13 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
+  
   <header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
         <h1 class="text-light"><a href="index.html"><span>Sober Club</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+     
       </div>
 
       <nav id="navbar" class="navbar">
@@ -51,7 +46,6 @@
           <li><a href="about.php">About</a></li>
           <li><a href="services.php">Services</a></li>
           <li><a class="active" href="our team.php">Our Team</a></li>
-          <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
           <li><a href="team.php">Incoming and outgoing awards</a></li>
           <li><a href="prize.php">Sober Prize</a></li>
           <li><a href="bios.php">Bios</a></li>
@@ -71,7 +65,6 @@
 
         <div class="section-title">
           <h2>Photoes and Bios of some members</h2>
-          <!-- <p>The strength of the Sober Club lies in its diverse membership, each with a spirit of *promoting healthier sober  lifestyle.*</p> -->
         </div>
         
         <div class="row" data-aos="fade-up">
