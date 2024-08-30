@@ -1,0 +1,49 @@
+.header_section {
+    position: relative;
+    /* background-color: #fff;  */
+    padding: 10px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo img {
+    max-width: 100%;
+  }
+  
+  .navbar {
+    position: relative; /* Required for positioning child elements absolutely */
+    display: flex;
+    justify-content: center; /* Center the toggle button horizontally */
+    align-items: center;
+    width: 100%;
+    /* background-color: #fff;  */
+  }
+  
+  .menu-toggle {
+    position: absolute;
+    top: 10px; /* Adjust the distance from the top as needed */
+    right: 10px; /* Adjust the distance from the right edge as needed */
+    display: none; /* Hide the menu toggle button by default */
+  }
+  
+  .navbar-menu {
+    display: flex;
+    /* background-color: #fff;  */
+  }
+  
+  /* Media query for small devices */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none; /* Hide the navbar on small screens */
+    }
+  
+    .menu-toggle {
+      display: block; /* Show the menu toggle button on small screens */
+    }
+  }
+  
