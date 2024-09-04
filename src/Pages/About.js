@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../Component/Navbar';
 
-
 function About() {
   return (
     <div class="sub_page">
@@ -16,15 +15,15 @@ function About() {
 
 
         <header className="header_section">
-        <Navbar />  
+        <Navbar />
       </header>
       </div>
 
 
 
+
       <section class="about_section layout_padding">
-        <div class="container  ">
-          {/* <div class="heading_container heading_center">
+      <div class="heading_container heading_center">
             <h2>
               About <span>Us</span>
             </h2>
@@ -32,7 +31,9 @@ function About() {
               So you want to get the buzz without the booze?
               Then The Sober Club is for you.
             </p>
-          </div> */}
+          </div>
+        <div class="container  ">
+         
           <div class="row">
             <div class="col-md-6 ">
               <div class="img-box">
@@ -92,7 +93,7 @@ function About() {
                   Kigali, Kicukiro<br />
                   Rwanda <br /><br />
                   <strong>Phone:</strong> +250788872060<br />
-                  <strong>Email:</strong>  soberclubrw@gmail.com<br />
+                  <strong>Email:</strong> soberclubrw@gmail.com<br />
                 </p>
               </div>
 

@@ -9,7 +9,10 @@ import Prize from './Pages/Prize';
 import Services from './Pages/Services';
 import Book from './Pages/Book';
 import RegistrationForm from './Pages/Register';
+
 import Juliana from './Pages/Juliana';
+
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -25,7 +28,10 @@ function App() {
         <Route path='/prize' element={<Prize />} />
         <Route path='/services' element={<Services />} />
         <Route path='/book' element={<Book />} />
+
         <Route path='/Juliana' element={<Juliana/>} />
+=======
+
         <Route path='/register' element={<RegistrationForm />} />
       </Routes>
     </BrowserRouter>

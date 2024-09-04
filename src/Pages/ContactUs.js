@@ -1,5 +1,9 @@
+
 import React from 'react';
 import Navbar from '../Component/Navbar';
+
+
+
 
 function ContactUs() {
   return (
@@ -11,8 +15,10 @@ function ContactUs() {
       </div>
 
       <header className="header_section">
-        <Navbar />  
+        <Navbar />
       </header>
+
+       
 
       <section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
       <div class="container">
@@ -109,8 +115,11 @@ function ContactUs() {
                   Kagarama <br />
                   Kigali, Kicukiro<br />
                   Rwanda <br /><br />
+
                   <strong>Phone:</strong> +250788872060<br />
                   <strong>Email:</strong>  soberclubrw@gmail.com<br />
+
+                  
                 </p>
               </div>
 

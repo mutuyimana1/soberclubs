@@ -23,7 +23,6 @@ function Home() {
 
   return (
     <div className="hero_area">
-      {/* Your existing code */}
       <div className="hero_bg_box">
         <div className="bg_img_box">
           <img src="images/hero-bg.png" alt="" style={{ width: '50%' }} />
@@ -176,7 +175,7 @@ function Home() {
                   <li><i className="bx bx-chevron-right"></i> <a href="#">Other health activities</a></li>
                   <li><i className="bx bx-chevron-right"></i> <a href="#">Cultural education</a></li>
                   <li><i className="bx bx-chevron-right"></i> <a href="#">Other social education without accommodation</a></li>
-                  <li><i className="bx bx-chevron-right"></i> <a href="#"> arts and entertainment activities</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#">Arts and entertainment activities</a></li>
                   <li><i className="bx bx-chevron-right"></i> <a href="#">Creative</a></li>
                 </ul>
               </div>
@@ -211,7 +210,6 @@ function Home() {
           <div className="copyright">
             &copy; 2023 <strong><span>Sober Clubs Rwanda</span></strong>. All Rights Reserved
           </div>
-
         </div>
       </footer>
 

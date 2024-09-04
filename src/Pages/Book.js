@@ -11,14 +11,14 @@ function Book() {
       </div>
 
       <header className="header_section">
-        <Navbar />  
+        <Navbar />
       </header>
 
       <section className="about" data-aos="fade-up">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <img src="assets/img/1.jpeg" className="img-fluid" alt=""/>
+              <img src="assets/img/1.jpeg" className="img-fluid" alt="" />
             </div>
             <div className="col-lg-6 pt-4 pt-lg-0">
               <h3 style={{ color: 'white', fontStyle: 'italic' }}>About the book “The Power of Keeping Sober”</h3>
@@ -42,11 +42,11 @@ function Book() {
           </div>
         </div>
       </section>
+
       <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
         <div className="footer-top">
           <div className="container">
             <div className="row">
-
               <div className="col-lg-3 col-md-6 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
@@ -64,7 +64,7 @@ function Book() {
                   <li><i className="bx bx-chevron-right"></i> <a href="#">Other health activities</a></li>
                   <li><i className="bx bx-chevron-right"></i> <a href="#">Cultural education</a></li>
                   <li><i className="bx bx-chevron-right"></i> <a href="#">Other social education without accommodation</a></li>
-                  <li><i className="bx bx-chevron-right"></i> <a href="#"> arts and entertainment activities</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#">Arts and entertainment activities</a></li>
                   <li><i className="bx bx-chevron-right"></i> <a href="#">Creative</a></li>
                 </ul>
               </div>
@@ -76,7 +76,7 @@ function Book() {
                   Kigali, Kicukiro<br />
                   Rwanda <br /><br />
                   <strong>Phone:</strong> +250788872060<br />
-                  <strong>Email:</strong>  soberclubrw@gmail.com<br />
+                  <strong>Email:</strong> soberclubrw@gmail.com<br />
                 </p>
               </div>
 
@@ -90,7 +90,6 @@ function Book() {
                   <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -99,12 +98,10 @@ function Book() {
           <div className="copyright">
             &copy; 2023 <strong><span>Sober Clubs Rwanda</span></strong>. All Rights Reserved
           </div>
-          
         </div>
       </footer>
-
     </div>
-  )
+  );
 }
 
-export default Book
+export default Book;
