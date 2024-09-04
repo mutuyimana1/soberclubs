@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../Component/Navbar';
 
 function About() {
   return (
@@ -13,58 +14,16 @@ function About() {
         </div>
 
 
-        <header class="header_section">
-          <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a className="navbar-brand" href="index.html">
-              <img src="images/logo.jpg" alt="" width={100} />
-            </a>
-
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class=""> </span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav  ">
-                  <li class="nav-item ">
-                    <a class="nav-link" href="/">Home </a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/about"> About <span class="sr-only">(current)</span> </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/services">Services</a>
-                  </li>
-                  <li class="nav-item">
-                  <a className="nav-link" href="/awards">Awards</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/bios">Bios</a>
-                  </li>
-                  <li className="nav-item">
-                  <a className="nav-link" href="/contactus">Contact Us</a>
-                </li>
-                  {/* <li class="nav-item">
-                    <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Program</a>
-                  </li> */}
-                  <form class="form-inline">
-                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                  </form>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </header>
-
+        <header className="header_section">
+        <Navbar />
+      </header>
       </div>
 
 
 
+
       <section class="about_section layout_padding">
-        <div class="container  ">
-          <div class="heading_container heading_center">
+      <div class="heading_container heading_center">
             <h2>
               About <span>Us</span>
             </h2>
@@ -73,6 +32,8 @@ function About() {
               Then The Sober Club is for you.
             </p>
           </div>
+        <div class="container  ">
+         
           <div class="row">
             <div class="col-md-6 ">
               <div class="img-box">
@@ -131,8 +92,8 @@ function About() {
                   Kagarama <br />
                   Kigali, Kicukiro<br />
                   Rwanda <br /><br />
-                  <strong>Phone:</strong> +250 789 567 567<br />
-                  <strong>Email:</strong> info@soberclubsrwanda.com<br />
+                  <strong>Phone:</strong> +250788872060<br />
+                  <strong>Email:</strong> soberclubrw@gmail.com<br />
                 </p>
               </div>
 
