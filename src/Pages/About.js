@@ -24,7 +24,7 @@ function About() {
 
       <section class="about_section layout_padding">
         <div class="container  ">
-          <div class="heading_container heading_center">
+          {/* <div class="heading_container heading_center">
             <h2>
               About <span>Us</span>
             </h2>
@@ -32,7 +32,7 @@ function About() {
               So you want to get the buzz without the booze?
               Then The Sober Club is for you.
             </p>
-          </div>
+          </div> */}
           <div class="row">
             <div class="col-md-6 ">
               <div class="img-box">
@@ -91,8 +91,8 @@ function About() {
                   Kagarama <br />
                   Kigali, Kicukiro<br />
                   Rwanda <br /><br />
-                  <strong>Phone:</strong> +250 789 567 567<br />
-                  <strong>Email:</strong> info@soberclubsrwanda.com<br />
+                  <strong>Phone:</strong> +250788872060<br />
+                  <strong>Email:</strong>  soberclubrw@gmail.com<br />
                 </p>
               </div>
 

@@ -173,33 +173,32 @@ function Home() {
               <div className="col-lg-3 col-md-6 footer-links">
                 <h4>Our Services</h4>
                 <ul>
-                  <li><i className="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                  <li><i className="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                  <li><i className="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                  <li><i className="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                  <li><i className="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#">Other health activities</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#">Cultural education</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#">Other social education without accommodation</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#"> arts and entertainment activities</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#">Creative</a></li>
                 </ul>
               </div>
 
               <div className="col-lg-3 col-md-6 footer-contact">
                 <h4>Contact Us</h4>
                 <p>
-                  A108 Adam Street <br />
-                  New York, NY 535022<br />
-                  United States <br /><br />
-                  <strong>Phone:</strong> +1 5589 55488 55<br />
-                  <strong>Email:</strong> info@example.com<br />
+                  Kagarama <br />
+                  Kigali, Kicukiro<br />
+                  Rwanda <br /><br />
+                  <strong>Phone:</strong> +250788872060<br />
+                  <strong>Email:</strong>  soberclubrw@gmail.com<br />
                 </p>
               </div>
 
               <div className="col-lg-3 col-md-6 footer-info">
-                <h3>About Sober Club</h3>
-                <p>Sober Club is committed to helping individuals overcome substance abuse and lead fulfilling lives.</p>
+                <h3>About Sober Clubs Rwanda</h3>
+                <p>Sober Clubs Rwanda, an organized social enterprise company operating under the legal and regulatory framework of Rwanda, is committed to addressing the critical issue of substance abuse within our community.</p>
                 <div className="social-links mt-3">
                   <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
                   <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
                   <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
-                  <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
                   <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
                 </div>
               </div>
@@ -210,11 +209,12 @@ function Home() {
 
         <div className="container">
           <div className="copyright">
-            &copy; Copyright <strong><span>Sober Club</span></strong>. All Rights Reserved
+            &copy; 2023 <strong><span>Sober Clubs Rwanda</span></strong>. All Rights Reserved
           </div>
-       
+
         </div>
       </footer>
+
     </div>
   );
 }

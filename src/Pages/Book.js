@@ -75,8 +75,8 @@ function Book() {
                   Kagarama <br />
                   Kigali, Kicukiro<br />
                   Rwanda <br /><br />
-                  <strong>Phone:</strong> +250 789 567 567<br />
-                  <strong>Email:</strong> info@soberclubsrwanda.com<br />
+                  <strong>Phone:</strong> +250788872060<br />
+                  <strong>Email:</strong>  soberclubrw@gmail.com<br />
                 </p>
               </div>
 

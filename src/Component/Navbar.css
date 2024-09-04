@@ -1,49 +1,71 @@
+/* Navbar.css */
+
+/* General styling */
 .header_section {
-    position: relative;
-    /* background-color: #fff;  */
-    padding: 10px 0;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .logo img {
-    max-width: 100%;
-  }
-  
-  .navbar {
-    position: relative; /* Required for positioning child elements absolutely */
-    display: flex;
-    justify-content: center; /* Center the toggle button horizontally */
-    align-items: center;
-    width: 100%;
-    /* background-color: #fff;  */
-  }
-  
+  /* background-color: #fff; */
+  padding: 7px 0;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo styling */
+.logo {
+  flex: 0 1 auto;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list .ant-menu-item {
+  margin: 0 15px;
+}
+
+.nav-list .ant-menu-item a {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Hide menu-toggle button on screens larger than 768px */
+@media (min-width: 768px) {
   .menu-toggle {
-    position: absolute;
-    top: 10px; /* Adjust the distance from the top as needed */
-    right: 10px; /* Adjust the distance from the right edge as needed */
-    display: none; /* Hide the menu toggle button by default */
+    display: none;
   }
-  
-  .navbar-menu {
-    display: flex;
-    /* background-color: #fff;  */
-  }
-  
-  /* Media query for small devices */
-  @media (max-width: 768px) {
-    .navbar-menu {
-      display: none; /* Hide the navbar on small screens */
-    }
-  
-    .menu-toggle {
-      display: block; /* Show the menu toggle button on small screens */
-    }
-  }
-  
+}
+
+/* Drawer styling for mobile */
+.ant-drawer-content {
+  /* background-color: #f5f5f5; */
+}

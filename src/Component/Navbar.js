@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, Drawer, Button } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import 'antd/dist/reset.css'; // Import the antd styles
+import './Navbar.css'; // Import your custom CSS
 
 function Navbar() {
   const [visible, setVisible] = useState(false);
@@ -23,12 +24,6 @@ function Navbar() {
               <img src="images/logo.jpg" alt="Logo" width={100} />
             </a>
           </div>
-          <Button
-            className="menu-toggle"
-            type="primary"
-            icon={<MenuOutlined />}
-            onClick={showDrawer}
-          />
           <nav className="navbar-menu">
             <Menu mode="horizontal" className="nav-list">
               <Menu.Item key="home">
@@ -51,6 +46,12 @@ function Navbar() {
               </Menu.Item>
             </Menu>
           </nav>
+          <Button
+            className="menu-toggle"
+            type="primary"
+            icon={<MenuOutlined />}
+            onClick={showDrawer}
+          />
           <Drawer
             title="Navigation"
             placement="right"
