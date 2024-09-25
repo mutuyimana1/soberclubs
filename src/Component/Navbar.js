@@ -41,6 +41,9 @@ function Navbar() {
               <Menu.Item key="bios">
                 <a href="/bios">Bios</a>
               </Menu.Item>
+              <Menu.Item key="learn-languages">
+                <a href="/ApplicationForm">Learn Languages</a>
+              </Menu.Item>
               <Menu.Item key="contactus">
                 <a href="/contactus">Contact Us</a>
               </Menu.Item>
@@ -78,6 +81,9 @@ function Navbar() {
               </Menu.Item>
               <Menu.Item key="bios">
                 <a href="/bios">Bios</a>
+              </Menu.Item>
+              <Menu.Item key="learn-languages">
+                <a href="/ApplicationForm">Learn Languages</a>
               </Menu.Item>
               <Menu.Item key="contactus">
                 <a href="/contactus">Contact Us</a>
