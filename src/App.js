@@ -9,7 +9,7 @@ import Prize from './Pages/Prize';
 import Services from './Pages/Services';
 import Book from './Pages/Book';
 import RegistrationForm from './Pages/Register';
-
+import ApplicationForm from './Pages/ApplicationForm';
 import Juliana from './Pages/Juliana';
 
 
@@ -28,6 +28,7 @@ function App() {
         <Route path='/prize' element={<Prize />} />
         <Route path='/services' element={<Services />} />
         <Route path='/book' element={<Book />} />
+        <Route path='/ApplicationForm' element={<ApplicationForm />} />
 
         <Route path='/Juliana' element={<Juliana/>} />
 =======
