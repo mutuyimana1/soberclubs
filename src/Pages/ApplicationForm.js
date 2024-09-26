@@ -1,10 +1,10 @@
 import React from "react";
-import { Layout, Typography, Card } from "antd";
+import { Layout, Typography, Card, Button } from "antd";
 import Navbar from '../Component/Navbar';
 import './ApplicationForm.css'; // Custom styles if needed
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 const { Title, Paragraph } = Typography;
 
 const ApplicationForm = () => {
@@ -17,19 +17,19 @@ const ApplicationForm = () => {
       </div>
 
       <Content className="content-container">
-      <Title level={3} className="main-title" style={{ color: 'white' }}>
-  Welcome to Sober International Language & Training Centre (SILT)
-</Title>
-<i><h2 className="location-info" style={{ color: 'white' }}>
-  Find us at the former UTB University Building.
-</h2></i>
+        <Title level={3} className="main-title" style={{ color: 'white' }}>
+          Welcome to Sober International Language & Training Centre (SILT)
+        </Title>
+        <i>
+          <h2 className="location-info" style={{ color: 'white' }}>
+            Find us at the former UTB University Building.
+          </h2>
+        </i>
 
         <div className="container">
-          
           <div className="row justify-content-center text-center">
-            
             <div className="col-12">
-             
+              {/* Additional content if needed */}
             </div>
           </div>
 
@@ -70,7 +70,7 @@ const ApplicationForm = () => {
                 <Paragraph>Registration Fee: 30,000 RWF (30 USD)</Paragraph>
               </Card>
             </div>
-<br></br>
+            <br></br>
             <div className="col-12 col-sm-6 col-lg-4">
               <Card className="info-card" title="Why Choose SILT?" bordered={false}>
                 <Paragraph>✅ Programs for beginners and beyond</Paragraph>
@@ -85,14 +85,14 @@ const ApplicationForm = () => {
               <Card className="info-card" title="Easy Registration Process" bordered={false}>
                 <Paragraph>💵 Pay the registration fee and fill out our form.</Paragraph>
                 <Paragraph>📞 Our team will contact you right away to get started!</Paragraph>
-                <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSd8cWTEyDyrTC_ceoV_xnG9XqPVypfy01XKgBsrHzu3BeA_Nw/viewform?vc=0&c=0&w=1&flr=0"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Fill out the registration form here
-</a>
-
+                <a 
+                  className="btn btn-primary btn-lg mt-2" 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSd8cWTEyDyrTC_ceoV_xnG9XqPVypfy01XKgBsrHzu3BeA_Nw/viewform?vc=0&c=0&w=1&flr=0" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Apply Here
+                </a>
               </Card>
             </div>
 
@@ -120,7 +120,22 @@ const ApplicationForm = () => {
               </Card>
             </div>
           </div>
+
+          {/* Add the button for online session here */}
         </div>
+        
+        <div className="text-center mt-3">
+            <a 
+              className="btn btn-primary btn-lg" 
+              href="https://us05web.zoom.us/j/84166218629?pwd=9bSaawL5BlNSbCJUWXlv5KlopsEabP.1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Attend Online Session
+            </a>
+          </div>
+
+
       </Content>
 
       <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
@@ -157,7 +172,6 @@ const ApplicationForm = () => {
                   Rwanda <br /><br />
                   <strong>Phone:</strong> +250788872060<br />
                   <strong>Email:</strong>  soberclubrw@gmail.com<br />
-                  
                 </p>
               </div>
 
