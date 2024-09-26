@@ -127,7 +127,7 @@ const ApplicationForm = () => {
         <div className="text-center mt-3">
             <a 
               className="btn btn-primary btn-lg" 
-              href="https://us05web.zoom.us/j/84166218629?pwd=9bSaawL5BlNSbCJUWXlv5KlopsEabP.1" 
+              href="https://us05web.zoom.us/j/84757709782?pwd=O47yqW9XHS25gStbbFlEOp5w35ho1c.1" 
               target="_blank" 
               rel="noopener noreferrer"
             >
