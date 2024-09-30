@@ -1,14 +1,16 @@
 import React from 'react';
-import { Form, Input, Button, Radio, Checkbox, message } from 'antd';
+import { Form, Input, Button, Radio, Checkbox, message, Select } from 'antd';
 import axios from 'axios';
 import './RegistrationForm.css'; // Import your custom CSS
+
+const { Option } = Select;
 
 const RegistrationForm = () => {
   const [form] = Form.useForm();
 
   const onFinish = async (values) => {
     try {
-      const response = await axios.post('https://sober-backend-dushimiman.onrender.com/api/register', values);
+      const response = await axios.post('http://localhost:5000/api/register', values);
       if (response.status === 201) {
         message.success('Registration successful!');
         form.resetFields(); 
@@ -67,6 +69,8 @@ const RegistrationForm = () => {
           <Input placeholder="Enter your phone number" />
         </Form.Item>
 
+        
+
         <Form.Item
           label="Mode of Study"
           name="modeOfStudy"
@@ -79,10 +83,11 @@ const RegistrationForm = () => {
         </Form.Item>
 
         <Form.Item
-          label="Your Language Program (Minimum 3 languages)"
-          name="languages"
-          rules={[{ required: true, message: 'Please select at least 3 languages!' }]}
-        >
+  label="Your Language Program (Minimum 3 languages)"
+  name="languages"
+  className="language-program" // Added class name
+  rules={[{ required: true, message: 'Please select at least 3 languages!' }]}
+>
           <Checkbox.Group>
             <Checkbox value="german"> German</Checkbox>
             <Checkbox value="arabic"> Arabic</Checkbox>
@@ -99,10 +104,11 @@ const RegistrationForm = () => {
         </Form.Item>
 
         <Form.Item
-          label="Specialized Unique Professional Trainings (Minimum 3 programs)"
-          name="trainings"
-          rules={[{ required: true, message: 'Please select at least 3 training programs!' }]}
-        >
+  label="Specialized Unique Professional Trainings (Minimum 3 programs)"
+  name="trainings"
+  className="specialized-trainings" // Added class name
+  rules={[{ required: true, message: 'Please select at least 3 training programs!' }]}
+>
           <Checkbox.Group>
             <Checkbox value="incomeProjects">Training in Designing and Supporting Income-generating Projects</Checkbox>
             <Checkbox value="bookWriting">Training in Book Writing and Selling</Checkbox>
