@@ -11,6 +11,7 @@ import Book from './Pages/Book';
 import RegistrationForm from './Pages/Register';
 import ApplicationForm from './Pages/ApplicationForm';
 import Juliana from './Pages/Juliana';
+import RegisteredUsers from './Pages/RegisteredUsers';
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -29,6 +30,7 @@ function App() {
         <Route path='/services' element={<Services />} />
         <Route path='/book' element={<Book />} />
         <Route path='/ApplicationForm' element={<ApplicationForm />} />
+        <Route path='/all' element={<RegisteredUsers/>} />
 
         <Route path='/Juliana' element={<Juliana/>} />
 =======

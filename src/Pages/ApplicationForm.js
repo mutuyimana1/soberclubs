@@ -87,7 +87,7 @@ const ApplicationForm = () => {
                 <Paragraph>📞 Our team will contact you right away to get started!</Paragraph>
                 <a 
                   className="btn btn-primary btn-lg mt-2" 
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSd8cWTEyDyrTC_ceoV_xnG9XqPVypfy01XKgBsrHzu3BeA_Nw/viewform?vc=0&c=0&w=1&flr=0" 
+                  href="/register" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
