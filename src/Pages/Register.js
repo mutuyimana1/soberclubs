@@ -1,16 +1,14 @@
 import React from 'react';
-import { Form, Input, Button, Radio, Checkbox, message, Select } from 'antd';
+import { Form, Input, Button, Radio, Checkbox, message } from 'antd';
 import axios from 'axios';
 import './RegistrationForm.css'; // Import your custom CSS
-
-const { Option } = Select;
 
 const RegistrationForm = () => {
   const [form] = Form.useForm();
 
   const onFinish = async (values) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/register', values);
+      const response = await axios.post('https://sober-backend-dushimiman.onrender.com/api/register', values);
       if (response.status === 201) {
         message.success('Registration successful!');
         form.resetFields(); 
@@ -68,8 +66,6 @@ const RegistrationForm = () => {
         >
           <Input placeholder="Enter your phone number" />
         </Form.Item>
-
-        
 
         <Form.Item
           label="Mode of Study"
