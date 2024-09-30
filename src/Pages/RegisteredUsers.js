@@ -15,7 +15,7 @@ const RegisteredUsers = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/registrations');
+        const response = await axios.get('https://sober-backend-dushimiman.onrender.com/api/registrations');
         setUsers(response.data);
         setFilteredUsers(response.data); // Initially show all users
       } catch (error) {
