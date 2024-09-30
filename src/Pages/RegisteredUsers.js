@@ -1,31 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Select, Radio, Typography, Space } from 'antd';
+import { Table, Select, Radio, Spin } from 'antd';
 import axios from 'axios';
-import './RegisteredUsers.css'; // Importing custom CSS
 
 const { Option } = Select;
-const { Title } = Typography;
 
 const RegisteredUsers = () => {
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [studyMode, setStudyMode] = useState('all'); // Default: all study modes
   const [programType, setProgramType] = useState('all'); // Default: all programs
+  const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true); // Start loading
       try {
-        const response = await axios.get('https://sober-backend-dushimiman.onrender.com/api/registrations');
+        const response = await axios.get('https://sober-backend-dushimiman.onrender.com/api/registrations'); // Adjust the URL to your backend
         setUsers(response.data);
         setFilteredUsers(response.data); // Initially show all users
+        setLoading(false); // Stop loading once data is fetched
       } catch (error) {
         console.error('Failed to fetch registrations:', error);
+        setLoading(false); // Stop loading on error
       }
     };
 
     fetchData();
   }, []);
 
+  // Filter users based on selected criteria
   useEffect(() => {
     let filtered = users;
 
@@ -40,6 +43,7 @@ const RegisteredUsers = () => {
     setFilteredUsers(filtered);
   }, [studyMode, programType, users]);
 
+  // Columns for the table
   const columns = [
     {
       title: 'Full Name',
@@ -76,7 +80,7 @@ const RegisteredUsers = () => {
       title: 'Trainings',
       dataIndex: 'trainings',
       key: 'trainings',
-      render: (trainings) => trainings.join(', '),
+      render: (trainings) => trainings.join(', '), // Adjust according to your data structure
     },
     {
       title: 'Location',
@@ -91,34 +95,41 @@ const RegisteredUsers = () => {
   ];
 
   return (
-    <div className="registered-users">
-      <Title level={2}>Registered Users</Title>
+    <div>
+      <h2>Registered Users</h2>
 
-      <div className="filter-container">
-        <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-          <Radio.Group
-            value={studyMode}
-            onChange={e => setStudyMode(e.target.value)}
-          >
-            <Radio.Button value="all">All Modes</Radio.Button>
-            <Radio.Button value="online">Online</Radio.Button>
-            <Radio.Button value="faceToFace">Face to Face</Radio.Button>
-          </Radio.Group>
+      <div style={{ marginBottom: '16px' }}>
+        {/* Filter by Mode of Study */}
+        <Radio.Group
+          value={studyMode}
+          onChange={e => setStudyMode(e.target.value)}
+        >
+          <Radio.Button value="all">All Modes</Radio.Button>
+          <Radio.Button value="online">Online</Radio.Button>
+          <Radio.Button value="faceToFace">Face to Face</Radio.Button>
+        </Radio.Group>
 
-          <Select
-            value={programType}
-            onChange={value => setProgramType(value)}
-            style={{ width: '200px' }}
-          >
-            <Option value="all">All Programs</Option>
-            <Option value="day">Day</Option>
-            <Option value="evening">Evening</Option>
-            <Option value="weekend">Weekend</Option>
-          </Select>
-        </Space>
+        {/* Filter by Program of Study */}
+        <Select
+          value={programType}
+          onChange={value => setProgramType(value)}
+          style={{ width: 200, marginLeft: '16px' }}
+        >
+          <Option value="all">All Programs</Option>
+          <Option value="day">Day</Option>
+          <Option value="evening">Evening</Option>
+          <Option value="weekend">Weekend</Option>
+        </Select>
       </div>
 
-      <Table dataSource={filteredUsers} columns={columns} rowKey="_id" />
+      {/* Show loading spinner while data is being fetched */}
+      {loading ? (
+        <div style={{ textAlign: 'center', padding: '20px' }}>
+          <Spin size="large" />
+        </div>
+      ) : (
+        <Table dataSource={filteredUsers} columns={columns} rowKey="_id" />
+      )}
     </div>
   );
 };

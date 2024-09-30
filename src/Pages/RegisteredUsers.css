@@ -1,18 +1,86 @@
-.registered-users {
-    padding: 20px;
+.registration-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ant-checkbox-group-item {
+  width: 50%;
+  margin-bottom: 8px;
+}
+
+/* Make checkboxes full-width on smaller screens */
+@media (max-width: 768px) {
+  .ant-checkbox-group-item {
+    width: 100%;
   }
-  
-  .filter-container {
-    margin-bottom: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+.ant-form-item-label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for the language program section */
+.language-program {
+  background-color: #e6f7ff;
+  padding: 10px;
+  border: 1px solid #91d5ff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.language-program label {
+  font-weight: bold;
+  color: #0050b3;
+}
+
+/* Style for the specialized professional trainings section */
+.specialized-trainings {
+  background-color: #fff7e6;
+  padding: 10px;
+  border: 1px solid #ffbb96;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.specialized-trainings label {
+  font-weight: bold;
+  color: #d46b08;
+}
+
+/* Responsive form container */
+@media (max-width: 600px) {
+  .registration-form-container {
+    padding: 10px;
   }
-  
-  @media (max-width: 768px) {
-    .filter-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-  
+}
+
+button[type="submit"] {
+  background-color: #1890ff;
+  color: #fff;
+  border: none;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #40a9ff;
+}
