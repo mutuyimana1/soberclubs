@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Select, Radio, Spin } from 'antd';
+import { Table, Select, Radio, Spin, Input, Button } from 'antd';
 import axios from 'axios';
 
 const { Option } = Select;
@@ -7,26 +7,31 @@ const { Option } = Select;
 const RegisteredUsers = () => {
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
-  const [studyMode, setStudyMode] = useState('all'); // Default: all study modes
-  const [programType, setProgramType] = useState('all'); // Default: all programs
-  const [loading, setLoading] = useState(true); // Loading state
+  const [studyMode, setStudyMode] = useState('all'); 
+  const [programType, setProgramType] = useState('all'); 
+  const [loading, setLoading] = useState(true); 
+  const [accessGranted, setAccessGranted] = useState(false); 
+  const [password, setPassword] = useState(''); 
+  const correctPassword = 'Learn@123'; 
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true); // Start loading
-      try {
-        const response = await axios.get('https://sober-backend-dushimiman.onrender.com/api/registrations'); // Adjust the URL to your backend
-        setUsers(response.data);
-        setFilteredUsers(response.data); // Initially show all users
-        setLoading(false); // Stop loading once data is fetched
-      } catch (error) {
-        console.error('Failed to fetch registrations:', error);
-        setLoading(false); // Stop loading on error
-      }
-    };
+    if (accessGranted) {
+      const fetchData = async () => {
+        setLoading(true); // Start loading
+        try {
+          const response = await axios.get('https://sober-backend-dushimiman.onrender.com/api/registrations');
+          setUsers(response.data);
+          setFilteredUsers(response.data); 
+          setLoading(false);
+        } catch (error) {
+          console.error('Failed to fetch registrations:', error);
+          setLoading(false); // Stop loading on error
+        }
+      };
 
-    fetchData();
-  }, []);
+      fetchData();
+    }
+  }, [accessGranted]);
 
   // Filter users based on selected criteria
   useEffect(() => {
@@ -94,41 +99,67 @@ const RegisteredUsers = () => {
     },
   ];
 
+  // Handle password check
+  const handlePasswordSubmit = () => {
+    if (password === correctPassword) {
+      setAccessGranted(true);
+    } else {
+      alert('Incorrect password, please try again.');
+    }
+  };
+
   return (
     <div>
-      <h2>Registered Users</h2>
-
-      <div style={{ marginBottom: '16px' }}>
-        {/* Filter by Mode of Study */}
-        <Radio.Group
-          value={studyMode}
-          onChange={e => setStudyMode(e.target.value)}
-        >
-          <Radio.Button value="all">All Modes</Radio.Button>
-          <Radio.Button value="online">Online</Radio.Button>
-          <Radio.Button value="faceToFace">Face to Face</Radio.Button>
-        </Radio.Group>
-
-        {/* Filter by Program of Study */}
-        <Select
-          value={programType}
-          onChange={value => setProgramType(value)}
-          style={{ width: 200, marginLeft: '16px' }}
-        >
-          <Option value="all">All Programs</Option>
-          <Option value="day">Day</Option>
-          <Option value="evening">Evening</Option>
-          <Option value="weekend">Weekend</Option>
-        </Select>
-      </div>
-
-      {/* Show loading spinner while data is being fetched */}
-      {loading ? (
-        <div style={{ textAlign: 'center', padding: '20px' }}>
-          <Spin size="large" />
+      {!accessGranted ? (
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <h3>Enter Password</h3>
+          <Input.Password
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            style={{ width: 300, marginBottom: '20px' }}
+          />
+          <Button type="primary" onClick={handlePasswordSubmit}>
+            Submit
+          </Button>
         </div>
       ) : (
-        <Table dataSource={filteredUsers} columns={columns} rowKey="_id" />
+        <div>
+          <h3>Registered</h3>
+
+          <div style={{ marginBottom: '16px' }}>
+            {/* Filter by Mode of Study */}
+            <Radio.Group
+              value={studyMode}
+              onChange={e => setStudyMode(e.target.value)}
+            >
+              <Radio.Button value="all">All Modes</Radio.Button>
+              <Radio.Button value="online">Online</Radio.Button>
+              <Radio.Button value="faceToFace">Face to Face</Radio.Button>
+            </Radio.Group>
+
+            {/* Filter by Program of Study */}
+            <Select
+              value={programType}
+              onChange={value => setProgramType(value)}
+              style={{ width: 200, marginLeft: '16px' }}
+            >
+              <Option value="all">All Programs</Option>
+              <Option value="day">Day</Option>
+              <Option value="evening">Evening</Option>
+              <Option value="weekend">Weekend</Option>
+            </Select>
+          </div>
+
+          {/* Show loading spinner while data is being fetched */}
+          {loading ? (
+            <div style={{ textAlign: 'center', padding: '20px' }}>
+              <Spin size="large" />
+            </div>
+          ) : (
+            <Table dataSource={filteredUsers} columns={columns} rowKey="_id" />
+          )}
+        </div>
       )}
     </div>
   );
