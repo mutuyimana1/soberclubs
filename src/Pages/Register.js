@@ -122,6 +122,7 @@ const RegistrationForm = () => {
                 <Checkbox value="entrepreneurship">Training in Entrepreneurship</Checkbox>
                 <Checkbox value="soberFellowship">Training in Sober Fellowship</Checkbox>
                 <Checkbox value="migrationLaws">Training on Migration Laws</Checkbox>
+                <Checkbox value="researchWriting">Training in Videography, Photography, Editing, Filming, Animation, UI/UX Design, Graphic Design</Checkbox>
                 <Checkbox value="researchWriting">Training in Research, Projects, Thesis, and Dissertation Writing Techniques</Checkbox>
               </Checkbox.Group>
             </Form.Item>
