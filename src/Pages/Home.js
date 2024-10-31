@@ -5,19 +5,11 @@ function Home() {
 
   useEffect(() => {
     // Create a script element
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.async = true;
-    script.src = 'https://embed.tawk.to/66c5d9a2ea492f34bc0883c0/1i5qdk9ca';
-    script.charset = 'UTF-8';
-    script.setAttribute('crossorigin', '*');
-
-    // Append the script to the body
-    document.body.appendChild(script);
+    
 
     return () => {
       // Cleanup the script when the component unmounts
-      document.body.removeChild(script);
+      // document.body.removeChild(script);
     };
   }, []);
 
