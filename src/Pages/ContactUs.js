@@ -6,6 +6,32 @@ import Navbar from '../Component/Navbar';
 
 
 function ContactUs() {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    };
+  
+    try {
+      const response = await fetch('https://sober-backend-dushimiman.onrender.com/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        alert('Your message has been sent. Thank you!');
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
   return (
       <div className="hero_area">
       <div className="hero_bg_box">
@@ -54,7 +80,7 @@ function ContactUs() {
           </div>
 
           <div class="col-lg-6">
-            <form action="contact.php" method="post" role="form" class="php-email-form">
+            <form onSubmit={handleSubmit} className="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required/>
