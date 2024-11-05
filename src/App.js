@@ -12,6 +12,7 @@ import RegistrationForm from './Pages/Register';
 import ApplicationForm from './Pages/ApplicationForm';
 import Juliana from './Pages/Juliana';
 import RegisteredUsers from './Pages/RegisteredUsers';
+import InternationalRegistrationsTable from './Pages/InternationalRegistrationsTable';
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -31,6 +32,7 @@ function App() {
         <Route path='/book' element={<Book />} />
         <Route path='/ApplicationForm' element={<ApplicationForm />} />
         <Route path='/all' element={<RegisteredUsers/>} />
+        <Route path='/allInternationalStudents' element={<InternationalRegistrationsTable/>} />
 
         <Route path='/Juliana' element={<Juliana/>} />
 =======
