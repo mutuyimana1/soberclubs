@@ -11,7 +11,7 @@ const InternationalRegistrationsTable = () => {
     // Fetch registrations from the API
     const fetchRegistrations = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/internationalregistrations/registrations');
+        const response = await axios.get('https://sober-backend-dushimiman.onrender.com/api/internationalregistrations/registrations');
 
         setRegistrations(response.data);
       } catch (error) {
